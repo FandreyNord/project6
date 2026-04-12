@@ -1,1 +1,358 @@
+/* Общие стили и сброс */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+    background: #f0f7ff;
+    color: #1e2a3e;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 32px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    padding: 2rem 2rem 0 2rem;
+}
+
+/* Текстовые блоки */
+.begin_text {
+    background: linear-gradient(135deg, #e6f0ff 0%, #ffffff 100%);
+    border-left: 6px solid #2c7da0;
+    padding: 1.5rem 2rem;
+    border-radius: 24px;
+    margin-bottom: 2rem;
+}
+
+.hello {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1f5068;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.3px;
+}
+
+.main_text {
+    font-size: 1rem;
+    color: #2c3e4e;
+    text-align: justify;
+}
+
+/* Блок с карточками (грид-контейнер) */
+.blox {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.8rem;
+}
+
+/* Стили для карточки .week (используется на главной) */
+.week {
+    background: #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #e2edf2;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.week:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.1);
+    border-color: #bdd9e7;
+}
+
+.week .hello {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: #1f5068;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.week .hello span {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #5e7e97;
+    background: #eef3fa;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+}
+
+.week .main_text {
+    flex-grow: 1;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+    color: #2c3e4e;
+}
+
+.week a {
+    display: inline-block;
+    background: #2c7da0;
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: background 0.2s, transform 0.1s;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+}
+
+.week a:hover {
+    background: #1f5068;
+    transform: scale(0.98);
+}
+
+/* Стили для таблицы (используются на страницах уроков) */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 2rem 0;
+    border-radius: 24px;
+    background: #ffffff;
+    border: 1px solid #e2edf2;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 1rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: top;
+}
+
+.schedule-table th {
+    background-color: #e6f0ff;
+    color: #1f5068;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.schedule-table tr:hover {
+    background-color: #f8fbff;
+}
+
+.schedule-table td:first-child,
+.schedule-table th:first-child {
+    font-weight: 500;
+    background-color: #fafcff;
+}
+
+.schedule-table a {
+    color: #2c7da0;
+    text-decoration: none;
+    border-bottom: 1px dotted #9bc2d4;
+}
+
+.schedule-table a:hover {
+    color: #1f5068;
+    border-bottom-style: solid;
+}
+
+/* Блок рекомендаций */
+.recom {
+    background: #fef7e0;
+    border-radius: 28px;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0 1.5rem;
+    border: 1px solid #ffe2a4;
+}
+
+.recom p.main_text {
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #aa6f20;
+}
+
+.recom ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.recom li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.8rem;
+    position: relative;
+    font-size: 0.98rem;
+    color: #4a3b1c;
+}
+
+.recom li::before {
+    content: "✓";
+    color: #f4a261;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.recom li span {
+    font-weight: 700;
+    color: #c97e2a;
+    margin-right: 0.4rem;
+}
+
+/* Футер и навигация */
+footer {
+    margin-top: 3rem;
+    border-top: 1px solid #e0edf2;
+    padding: 1.2rem 0;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav__element {
+    font-size: 0.9rem;
+    color: #5e7e97;
+    transition: color 0.2s;
+    position: relative;
+}
+
+.nav__element a {
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.2s;
+}
+
+.nav__element a:hover {
+    opacity: 0.7;
+}
+
+.git {
+    width: 32px;
+    height: auto;
+    vertical-align: middle;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+}
+
+/* Стили для возможного блока "участники" */
+.members {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2c3e50;
+    color: white;
+    border-radius: 20px;
+    padding: 0.6rem 1rem;
+    list-style: none;
+    white-space: nowrap;
+    gap: 0.8rem;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+
+.nav__element:hover .members {
+    display: flex;
+}
+
+.members__element {
+    padding: 0.2rem 0.4rem;
+}
+
+/* Кнопка возврата на главную */
+.back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    background: #eef3fa;
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+    color: #1f5068;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.back-link:hover {
+    background: #e0eef6;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+    .container {
+        padding: 1rem 1rem 0 1rem;
+        border-radius: 24px;
+    }
+    .begin_text .hello {
+        font-size: 1.4rem;
+    }
+    .begin_text, .recom {
+        padding: 1rem 1.2rem;
+    }
+    .blox {
+        gap: 1rem;
+    }
+    .week .hello {
+        font-size: 1.2rem;
+    }
+    .navigation {
+        gap: 1rem;
+    }
+    .schedule-table th,
+    .schedule-table td {
+        padding: 0.75rem 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .recom li {
+        font-size: 0.9rem;
+        padding-left: 1.5rem;
+    }
+    .git {
+        width: 26px;
+    }
+    .week a {
+        width: 100%;
+        text-align: center;
+    }
+    .schedule-table {
+        font-size: 0.85rem;
+    }
+}
+
+/* Дополнительные улучшения */
+a:not(.week a):not(.nav__element a):not(.back-link) {
+    color: #2c7da0;
+    text-decoration: none;
+    border-bottom: 1px dotted #9bc2d4;
+}
+
+a:not(.week a):not(.nav__element a):not(.back-link):hover {
+    color: #1f5068;
+    border-bottom-style: solid;
+}
