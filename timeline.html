@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 План профессионального развития педагога | 2026–2028</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', system-ui, 'Helvetica Neue', sans-serif;
+            background: #f0f7ff;
+            color: #1e2a3e;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 2rem 2rem 1rem 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1f5068, #2c7da0);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #2c3e4e;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+            padding-left: 1rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            bottom: 20px;
+            width: 3px;
+            background: linear-gradient(to bottom, #2c7da0, #a0c4d9);
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .timeline-marker {
+            position: relative;
+            width: 40px;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            z-index: 2;
+        }
+
+        .marker-dot {
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 3px solid #2c7da0;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px #e6f0ff;
+            margin-top: 8px;
+        }
+
+        .timeline-year {
+            position: absolute;
+            left: -50px;
+            top: 0;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #2c7da0;
+            background: #e6f0ff;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            white-space: nowrap;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: #ffffff;
+            border-radius: 1.5rem;
+            padding: 1.2rem 1.5rem;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2edf2;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 22px rgba(0, 0, 0, 0.08);
+            border-color: #c2d6e2;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #1f5068;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .timeline-content h3 .badge {
+            background: #eef3fa;
+            font-size: 0.7rem;
+            font-weight: 400;
+            padding: 0.2rem 0.6rem;
+            border-radius: 40px;
+            color: #2c7da0;
+        }
+
+        .timeline-content .date-range {
+            font-size: 0.8rem;
+            color: #5e7e97;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+            background: #f4f9fe;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+        }
+
+        .timeline-content p {
+            color: #2c3e4e;
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-content ul {
+            margin-left: 1.2rem;
+            color: #2c3e4e;
+        }
+
+        .timeline-content li {
+            margin-bottom: 0.4rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            background: #eef3fa;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            color: #1f5068;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .back-link:hover {
+            background: #e0eef6;
+        }
+
+        footer {
+            margin-top: 3rem;
+            border-top: 1px solid #e0edf2;
+            padding: 1.2rem 0;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav__element {
+            font-size: 0.9rem;
+            color: #5e7e97;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav__element a {
+            text-decoration: none;
+            display: inline-block;
+            transition: opacity 0.2s;
+        }
+
+        .nav__element a:hover {
+            opacity: 0.7;
+        }
+
+        .git {
+            width: 32px;
+            height: auto;
+            vertical-align: middle;
+            filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+        }
+
+        @media (max-width: 760px) {
+            .container {
+                padding: 1.5rem;
+            }
+            .timeline {
+                padding-left: 0;
+            }
+            .timeline::before {
+                left: 16px;
+            }
+            .timeline-marker {
+                width: 32px;
+            }
+            .timeline-year {
+                position: static;
+                white-space: normal;
+                margin-bottom: 0.5rem;
+                display: inline-block;
+            }
+            .timeline-item {
+                flex-direction: column;
+                margin-left: 1rem;
+            }
+            .timeline-marker {
+                margin-left: -1rem;
+                margin-bottom: -0.5rem;
+            }
+            .timeline-content {
+                margin-left: 0.5rem;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .navigation {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .timeline-content h3 {
+                font-size: 1.2rem;
+            }
+            .git {
+                width: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="#" class="back-link" onclick="history.back(); return false;">← Назад</a>
+
+    <div class="hero">
+        <h1>🧑‍🏫 Профессиональный маршрут</h1>
+        <p>📌 План развития педагога на ближайшие три года: повышение квалификации, методическая работа и личностный рост</p>
+    </div>
+
+    <div class="timeline">
+        <!-- 2026 -->
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <div class="marker-dot"></div>
+                <span class="timeline-year">2026</span>
+            </div>
+            <div class="timeline-content">
+                <h3>📚 Фундамент и новые подходы <span class="badge">базовый этап</span></h3>
+                <span class="date-range">🗓️ весь год</span>
+                <p>Укрепление педагогического мастерства, знакомство с цифровыми инструментами и подготовка к аттестации.</p>
+                <ul>
+                    <li>✅ Курсы повышения квалификации по современным образовательным технологиям.</li>
+                    <li>✅ Освоение интерактивных платформ для создания заданий.</li>
+                    <li>✅ Разработка нескольких сценариев уроков с использованием активных методов.</li>
+                    <li>✅ Выступление на школьном методическом объединении.</li>
+                    <li>✅ Ведение профессионального блога или канала для обмена опытом.</li>
+                    <li>✅ Подача заявки на первую квалификационную категорию.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <div class="marker-dot"></div>
+            </div>
+            <div class="timeline-content">
+                <h3>☀️ Летняя практика</h3>
+                <span class="date-range">🗓️ июнь – август</span>
+                <p>Участие в летних онлайн-мероприятиях для педагогов, обмен опытом с коллегами из других регионов. Пополнение методической копилки материалами для основной школы.</p>
+            </div>
+        </div>
+
+        <!-- 2027 -->
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <div class="marker-dot"></div>
+                <span class="timeline-year">2027</span>
+            </div>
+            <div class="timeline-content">
+                <h3>🚀 Углубление и наставничество <span class="badge">активный рост</span></h3>
+                <span class="date-range">🗓️ весь год</span>
+                <p>Системная методическая работа, участие в конкурсах и запуск собственных мини-проектов.</p>
+                <ul>
+                    <li>🎤 Выступление на муниципальной конференции по формированию функциональной грамотности.</li>
+                    <li>📐 Разработка и апробация элективного курса по математике для 6–7 классов.</li>
+                    <li>🏆 Участие в профессиональном конкурсе (школьный / муниципальный этап).</li>
+                    <li>📄 Публикация статьи из опыта работы в сборнике или журнале.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <div class="marker-dot"></div>
+            </div>
+            <div class="timeline-content">
+                <h3>💻 Проект «Цифровой помощник»</h3>
+                <span class="date-range">🗓️ сентябрь 2027 – май 2028</span>
+                <p>Создание серии видеоуроков и интерактивных тренажёров для дистанционной поддержки учеников. Внедрение элементов геймификации в учебный процесс.</p>
+            </div>
+        </div>
+
+        <!-- 2028 -->
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <div class="marker-dot"></div>
+                <span class="timeline-year">2028</span>
+            </div>
+            <div class="timeline-content">
+                <h3>🏆 Экспертиза и масштабирование <span class="badge">вершина мастерства</span></h3>
+                <span class="date-range">🗓️ весь год</span>
+                <p>Выход на региональный уровень, обобщение опыта и трансляция лучших практик.</p>
+                <ul>
+                    <li>⭐ Подтверждение или повышение квалификационной категории (первая / высшая).</li>
+                    <li>🎤 Организация мастер-класса для коллег района по интерактивным методикам.</li>
+                    <li>📚 Запуск онлайн-курса для педагогов по созданию цифровых образовательных ресурсов.</li>
+                    <li>🏅 Участие в региональном конкурсе методических разработок.</li>
+                    <li>📑 Защита мини-проекта по индивидуализации обучения (портфолио достижений).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-marker">
+                <div class="marker-dot"></div>
+            </div>
+            <div class="timeline-content">
+                <h3>🔍 Анализ и новые горизонты</h3>
+                <span class="date-range">🗓️ ноябрь – декабрь</span>
+                <p>Подведение итогов трёхлетнего развития: сбор обратной связи, корректировка индивидуального маршрута, планирование участия в грантовых программах.</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #eef3fa; border-radius: 1.5rem; padding: 1.2rem 1.5rem; margin: 2rem 0 1rem;">
+        <p style="font-weight: 500; color: #1f5068;">📌 Ежеквартальная система контроля:</p>
+        <ul style="display: flex;flex-wrap: wrap;gap: 1rem;margin-top: 0.5rem;list-style: none;flex-direction: column;">
+            <li>✅ Рефлексия по итогам четверти</li>
+            <li>✅ Анализ успеваемости учеников</li>
+            <li>✅ Самооценка по чек-листу компетенций</li>
+            <li>✅ Корректировка плана при необходимости</li>
+        </ul>
+    </div>
+
+    <footer>
+        <nav>
+            <ul class="navigation">
+                <li class="nav__element"><a href="https://github.com/FandreyNord"><img class="git" src="img/svg/github-mark.svg" alt="GitHub"></a></li>
+                <li class="nav__element">2026</li>
+                <li class="nav__element">
+                    Telegram: @httpswwwnothingcom
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+</body>
+</html>
